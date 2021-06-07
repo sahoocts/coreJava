@@ -10,6 +10,8 @@
     <artifactId>asm</artifactId>
     <version>20041228.180559</version>
 </dependency>
+     
+     <!-- code change team lead -->
 <dependency>
     <groupId>com.sun.jersey</groupId>
     <artifactId>jersey-client</artifactId>
