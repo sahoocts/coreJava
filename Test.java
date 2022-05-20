@@ -1,28 +1,48 @@
-package Geeksforgeeks;
-
-import java.util.HashMap;
-import java.util.Map;
+package Eighteen_four;
 
 public class Test {
-    static void gethash(int a[]){
 
-        HashMap<Integer,Integer> hs=new HashMap<>();
+    static int[] getDetails(int a[]){
+
+        int c[]=new int[a.length];
+        int s=0;
         for(int i=0;i<a.length;i++){
-            if(hs.containsKey(a[i])){
-                hs.put(a[i],hs.get(a[i])+1);
+            if(a[i]>=0){
+                c[s]=a[i];
+                s++;
             }
-            else{
-                hs.put(a[i],1);
-            }
+        }
+         for(int i=0;i<a.length;i++){
+             if(a[i]<0){
+                 c[s]=a[i];
+                 s++;
+             }
+        }
 
+       /* for(int i=0;i<a.length;){
+            if(s<c){
+                d[i]=a[s];
+                s++;
+                i++;
+            }
+            if(l<a.length){
+                d[i]=a[l];
+                l++;
+                i++;
+            }
         }
-        for(Map.Entry es:hs.entrySet()){
-            System.out.println(es.getKey()+"::"+es.getValue());
-        }
+        return d;*/
+        return c;
     }
-    public static void main(String args[]){
 
-        int a[]={1,2,3,4,1,2,3,4};
-        gethash(a);
+    public static void main(String args[]){
+        int Arr[] = {9, 4, -2, -1, 5, 0, -5, -3, 2};
+
+
+        int e[]=getDetails(Arr);
+        for(int ee:e){
+            System.out.print(ee);
+        }
+
     }
 }
