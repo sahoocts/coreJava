@@ -1,18 +1,22 @@
-package Java8.MCQS;
+package Java8.Employeee;
 
 public class Test {
-    static int start = 2;
-    final int end;
-    public Test(int x) {
-        x = 4;
-        end = x;
-    }
-    public void fly(int distance) {
-        System.out.println(end-start+" ");
-        System.out.println(distance);
-    }
+
     public static void main(String args[]){
-              Test t=new Test(10);
-                t.fly(5);
+        try{
+            m1();
+        }
+    catch(Exception e){
+      System.out.println("ghgsa");
+    }
+        finally{
+            System.out.println("hi");
+        }
+        System.out.println("hiii");
+    }
+
+    private static void m1() {
+        System.out.println("dggf");
+        throw new RuntimeException("hello");
     }
 }

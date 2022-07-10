@@ -1,26 +1,28 @@
-package LogicImplemented;
+package Java8.Employeee;
 
-public class Testing {
+interface AAA{
+    public void m1();
+}
 
+interface BBB{
+    public void m1();
+}
+
+interface CCC{
+    public void m1();
+}
+interface DDD extends AAA,BBB,CCC{
+
+}
+public class Testing implements DDD{
+    public void m1(){
+        System.out.println("Testing");
+    }
     public static void main(String args[]){
+        AAA s=new Testing();
+        s.m1();
 
-        int arr[]={15,-2,-1,1,2,-8,1,7,10,23};
-        int rsult=getMax(arr);
-
+       // AAA s1=new Testing();
+        //s1.m1();
     }
-
-    private static int getMax(int[] arr) {
-        for(int i=0;i<arr.length;i++){
-            int sum=0;
-            for(int j=i;j<arr.length;j++){
-                sum=sum+arr[j];
-                if(sum==0){
-                    System.out.println("sum is zero");
-                }
-
-            }
-        }
-        return 1;
-    }
-
 }
