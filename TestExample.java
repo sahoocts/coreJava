@@ -1,56 +1,33 @@
-import java.util.Stack;
+package Java8;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class TestExample {
-    public static void main(String args[]){
-       // String str="JORAS";
-       /* char ch[]=str.toCharArray();
-        int i=0;
-        char c;
-        int j=ch.length-1;
-        while(i<j){
-            c=ch[i];
-            ch[i]=ch[j];
-            ch[j]=c;
-            i++;
-            j--;
-        }
-        for(char c1:ch){
-            System.out.print(c1);
-        }*/
+    public static void main(String ars[]){
+        String str="adbaccadcaa";//abc
+        getM(str);
+    }
 
-        /*int a1[]={1,2,3};
-        int a2[]={4,5,6};
-        int c[]=new int[a1.length+a2.length];
-        int k=0;
-        for(int i=0;i<a1.length;i++){
-            c[k]=a1[i];
-            k++;
-        }
-        for(int j=0;j<a2.length;j++){
-            c[k]=a2[j];
-            k++;
+    private static void getM(String str) {
+
+        char ch1[]=str.toCharArray();
+        HashMap<Character,Integer> hs=new HashMap<>();
+        for(int i=0;i<ch1.length;i++){
+            if(hs.containsKey(ch1[i])){
+                hs.put(ch1[i],hs.get(ch1[i])+1);
+            }
+            else{
+                hs.put(ch1[i],1);
+            }
         }
 
-        for(int s:c){
-            System.out.print(":"+s);
+        for(Map.Entry e:hs.entrySet()){
+            int n= (int)e.getValue();
+            if(n%2!=0){
+                System.out.print(e.getKey());
+            }
         }
-*/
-
-        Stack<Character> st=new Stack<>();
-        st.push('s');
-        st.push('a');
-        st.push('r');
-        st.push('o');
-        st.push('j');
-      //  System.out.print(st.peek());
-        st.pop();
-        System.out.print(st.peek());
-
-
-
-
-
-
 
     }
 }
