@@ -1,16 +1,18 @@
-package Java8;
+package Java8.MCQS;
 
-import java.util.HashMap;
-
-class Acce {
-
+public class Test {
+    static int start = 2;
+    final int end;
+    public Test(int x) {
+        x = 4;
+        end = x;
+    }
+    public void fly(int distance) {
+        System.out.println(end-start+" ");
+        System.out.println(distance);
+    }
     public static void main(String args[]){
-        HashMap<String,Integer> hs=new HashMap<>();
-        hs.put("s11",1);
-        hs.put("sa",2);
-        hs.put("s11",1);
-        System.out.println(hs.size());
-
-        System.out.println("gg");
+              Test t=new Test(10);
+                t.fly(5);
     }
 }
