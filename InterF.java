@@ -1,6 +1,6 @@
 package JAVA8.FunctionalInterface;
 
-
+@FunctionalInterface
 public interface InterF {
     public void m1();
 

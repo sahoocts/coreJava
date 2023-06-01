@@ -6,10 +6,10 @@ abstract class Abst{
 
 public class AbstractApp{
 
-    public static void main(String args[]){
+  public static void main(String args[]){
   int n=5;
   int a=6;
-  int c=n%a;
+  int c=80/10;
   System.out.println(c);
 
     }

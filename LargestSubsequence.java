@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class LargestSubsequence {
 
     public static void main(String args[]){
-
         int a[]={1,9,3,10,4,20,2};
         int result=getLargestSubsequence(a);
         System.out.println(result);

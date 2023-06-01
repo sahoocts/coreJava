@@ -27,9 +27,9 @@ public class OverRidingExample {
         Sports s1=new Sports();
         Soccer s2=new Soccer();
         Sports s3=new Soccer();
-        System.out.println(s1.getName());
+        System.out.println(s1.getName());//"Generic sports";
         s1.getNumberOfTeamMembers();
-        System.out.println(s2.getName());
+        System.out.println(s3.getName());//soccer
       //  s2.getNumberOfTeamMembers();
         s3.getNumberOfTeamMembers();
 

@@ -1,39 +1,27 @@
-package HackersRank_06062022;
+package Leetcode;
 
-import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Duplicates {
 
-    public static void main(String args[]){
-        String str="efeacdab";
-        char ch[]=str.toCharArray();
-        char tmp[]=new char[ch.length];
-        Arrays.sort(ch);
-        int k=0;
-        for(int i=0;i<ch.length;i++){
-            for(int j=i+1;j<=i;j++){
-                if(ch[i]!=ch[j]){
-                    tmp[k]=ch[i];
-                    k++;
-                }
+    public static void main(String args[]) {
+        int a[] = {3, 1, 2, 3, 8};
+        int c=findDuplicate(a);
+        System.out.print(c);
+    }
+
+
+    public static int findDuplicate(int[] nums) {
+        int x = 0;
+        Set<Integer> set = new HashSet<Integer>();
+        for (int s : nums) {
+            if (!set.contains(s)) {
+                set.add(s);
+            } else {
+                x = s;
             }
-
         }
-       /* int i=0;
-        int j=1;
-        while(i<ch.length && j<ch.length){
-            if(ch[i]!=ch[j]){
-                ch[k]=ch[i];
-                k++;
-            }
-            i++;
-            j++;
-
-        }*/
-        System.out.print("hello");
-        for(char c:tmp){
-            System.out.print(c);
-        }
-
+        return x;
     }
 }

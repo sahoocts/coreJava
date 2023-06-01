@@ -25,7 +25,7 @@ public class FindTripletsWithGivenDum {
         while(i<j){
 
             if(sum==a[i]+a[j]){
-                System.out.println(a[i]+"::"+a[j]);
+             //   System.out.println(a[i]+"::"+a[j]);
                 triplet.add(Arrays.asList(a[i],a[j]));
                 i++;
                 j--;

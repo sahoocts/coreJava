@@ -1,17 +1,10 @@
-package HackersRankk;
+package JAVA8;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Arrays;
+import java.util.List;
 
 public class Employee {
-    private int id;
-    private int age;
-    private String name;
-    public Employee(int id, int age, String name){
-        this.id=id;
-        this.name=name;
-        this.age=age;
-    }
+    int id;
 
     public int getId() {
         return id;
@@ -19,14 +12,6 @@ public class Employee {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getName() {
@@ -37,28 +22,27 @@ public class Employee {
         this.name = name;
     }
 
-public static void main(String args[]){
+    String name;
 
-    List<Employee> list= Arrays.asList(new Employee(1,20,"saroj"),
-            new Employee(2,30,"Sachin"),new Employee(3,40,null));
-
-    //pull out the name of employe whos ages greater 20;
-
-     list.stream().filter(e->e.age>20).forEach(e->System.out.println(e.name));
-
-  //  System.out.println(map);
-
-
-
-//   String opt=Optional.ofNullable(str).map(String::toUpperCase).orElse("Not present");
- //   System.out.println(opt);
-    /*if(opt.isPresent()){
-        System.out.println(e.name.toUpperCase());
+    public Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
     }
-    else{
-        System.out.println("not present");
-    }*/
-}
+public static void main(String args[]){
+    Employee e1=new Employee(1,"saroj1");
+    Employee e2=new Employee(2,"saroj2");
+    Employee e3=new Employee(3,"saroj3");
+    Employee e4=new Employee(4,"saroj4");
+    List<Employee> empList1= Arrays.asList(e1,e2,e3,e4);
+    empList1.stream().filter(a->a.getId()%2==0).map(a->{
+        return a.getName();
+    }).forEach(a->System.out.println(a));
 
+   // empList1.stream().filter(a->a.getId()%2==0).forEach(a->System.out.println(a.getName()));
+
+
+
+
+}
 
 }

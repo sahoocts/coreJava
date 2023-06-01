@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class IteraterApp {
-
-
      static Iterator fun(ArrayList myList){
          Iterator it1=myList.iterator();
          while(it1.hasNext()){
