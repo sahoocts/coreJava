@@ -1,3 +1,5 @@
+package NewPrepare;
+
 import java.util.ArrayList;
 
 public class LeaderOfArray {
@@ -6,7 +8,7 @@ public class LeaderOfArray {
         // Your code here
         ArrayList<Integer> a=new ArrayList<Integer>();
         int rt_value=arr[n-1];
-        a.add(rt_value);
+         a.add(rt_value);
         for(int i=n-2;i>=0;i--){
             if(arr[i]>rt_value){
                 rt_value=arr[i];

@@ -1,3 +1,5 @@
+package NewPrepare;
+
 public class SpaceCount {
 
     public static void main(String args[]){
@@ -26,14 +28,14 @@ public class SpaceCount {
                 k++;
             }
         }
-            while(k<n){
-                a[k]='0';
-                k++;
-            }
+        while(k<n){
+            a[k]='0';
+            k++;
+        }
 
-            for(char f:a){
-                System.out.print(f);
-            }
+        for(char f:a){
+            System.out.print(f);
+        }
 
             /*if(str.charAt(i)!='1'){
                 //System.out.println("ok");

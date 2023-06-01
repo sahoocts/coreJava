@@ -1,7 +1,9 @@
+package NewPrepare;
+
 public class RepeatingDigitInGivenNumber {
 
     public static void printDup(String n){
-        int cnt[]=new int[10];
+        int cnt[]=new int[26];
         for(int i=0;i<n.length();i++){
             int digit=(n.charAt(i)-'0');
             cnt[digit]=cnt[digit]+1;

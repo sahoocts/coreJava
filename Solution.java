@@ -1,46 +1,42 @@
-package HackersRank_06062022;
-
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+package NewClassAdded;
 
 public class Solution {
 
-    public static void main(String[] args) {
-
-        Scanner in = new Scanner(System.in);
-        long T = in.nextLong();
-        for(int t = 0; t < T; t++) {
-            int N = in.nextInt();
-            long M = in.nextLong();
-            long[] array = new long[N];
-            for (int i = 0; i < N; i++) {
-                array[i] = in.nextLong();
-            }
-            solve(M,array);
-        }
+    public static void main(String args[]) {
+        String s = "acaaabbbacdddds";
+        //  String s="geeksforgeeks";
+        String s11 = rremove(s);
+        System.out.println(s11);
+        System.out.print(0/3);
     }
 
-    static void solve(long M, long[] array){
-        TreeSet<Long> sumSet = new TreeSet<Long>();
-        long best = 0;
-        long sum = 0;
+    private static String rremove(String s) {
+        // code here
+        String s1 = "";
+        while (s.length() != s1.length()) {
+            s1 = s;
+            s = rem(s);
+        }
+        return s;
+    }
 
-        for(int i = 0; i < array.length; i++){
-
-            sum = (sum + array[i]) % M;
-            Long up = sumSet.higher(sum);
-            if(up == null){
-                best = Math.max(best,sum);
+   private static String rem(String s) {
+        StringBuilder ans = new StringBuilder();
+        //String ans="";
+        int n = s.length();
+        int i = 0;
+        while (i < n) {
+            if (i < n - 1 && s.charAt(i) == s.charAt(i + 1)) {
+                while (i < n - 1 && s.charAt(i) == s.charAt(i + 1)) {
+                    i++;
+                }
             } else {
-                best = Math.max(best, M - up + sum);
+                ans.append(s.charAt(i));
             }
-            sumSet.add(sum);
+
+            i++;
         }
 
-        System.out.println(best);
+        return ans.toString();
     }
-
 }

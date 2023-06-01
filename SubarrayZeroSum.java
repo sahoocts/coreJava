@@ -1,8 +1,8 @@
-package Eighteen_four;
+package NewPrepare;
 
 import java.util.HashSet;
 
-//4, 2, -3, 1, 6
+//4, 2,-3, 1, 6
 //4
 public class SubarrayZeroSum {
     static boolean findsum(int arr[],int n)
@@ -25,7 +25,7 @@ public class SubarrayZeroSum {
     }
     public static void main(String args[]){
         int n=5;
-        int a[]={4, 2, -3, 1, 6};
+        int a[]={4, 2, 2,-3, 1, 6};
         boolean x=findsum(a,n);
         System.out.println(x);
     }

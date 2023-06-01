@@ -1,4 +1,6 @@
-package Java8;
+package NewPrepare;
+
+
 
 import java.util.Arrays;
 
@@ -13,7 +15,7 @@ public class MedianOfArray {
         Arrays.sort(a);
         int median=a.length/2;
         int b[]=new int[median];
-      //  for(int i=0;i<median;i++)
+        //  for(int i=0;i<median;i++)
         int j=0;
         int n=0;
         while(median>0){
@@ -26,6 +28,6 @@ public class MedianOfArray {
             }
         }
         System.out.println(median);
-     //   System.out.println(a[median]);
+        //   System.out.println(a[median]);
     }
 }

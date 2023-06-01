@@ -1,4 +1,4 @@
-package NewTry;
+package NewPrepare;
 
 public class RemoveDuplicate {
     public static int removeduplicates(int a[], int n)

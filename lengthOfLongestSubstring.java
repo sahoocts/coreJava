@@ -1,36 +1,36 @@
-package LogicImplemented;
+package New_Leetcode;
 
 public class lengthOfLongestSubstring {
-
-    private static int lengthOfLongestSubstring(String s){
-        int res=0;
-        for(int i=0;i<s.length();i++){
-            for(int j=i;j<s.length();j++){
-                if(isCheck(s,i,j)){
-                    res=Math.max(res,j-i+1);
+        public int lengthOfLongestSubstring(String s) {
+            int n = s.length();
+            int res = 0;
+            for (int i = 0; i < n; i++) {
+                for (int j = i; j < n; j++) {
+                    if (checkRepetition(s, i, j)) {
+                        res = Math.max(res, j - i + 1);
+                    }
                 }
             }
+            return res;
         }
-        return res;
-    }
-    public static boolean isCheck(String s,int start,int end){
-        int temp[]=new int[128];
-        for(int i=start;i<=end;i++){
-            char c=s.charAt(i);
-            temp[c]++;
-            if(temp[c]>1){
-                return false;
+        private boolean checkRepetition(String s, int start, int end) {
+            int[] chars = new int[128];
+            for (int i = start; i <= end; i++) {
+                char c = s.charAt(i);
+                chars[c]++;
+                if (chars[c] > 1) {
+                    return false;
+                }
             }
+            return true;
         }
-        return true;
+        public static void main(String args[]) {
+            // Your code goes here
+            lengthOfLongestSubstring ob = new lengthOfLongestSubstring();
+           // String s = "Hello";
+            String s="abcabcbb";
+          //  String s = "abcdd";
+            System.out.println(ob.lengthOfLongestSubstring(s));
+        }
     }
 
-
-
-    public static void main(String args[]){
-        String s = "abcdd";
-        int x=lengthOfLongestSubstring(s);
-        System.out.println("The value is"+x);
-
-    }
-}

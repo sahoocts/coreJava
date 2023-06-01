@@ -1,4 +1,5 @@
-package Java8.Employeee;
+package NewPrepare;
+
 
 interface AAA{
     public void m1();
@@ -22,7 +23,7 @@ public class Testing implements DDD{
         AAA s=new Testing();
         s.m1();
 
-       // AAA s1=new Testing();
+        // AAA s1=new Testing();
         //s1.m1();
     }
 }

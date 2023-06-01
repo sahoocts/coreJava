@@ -1,3 +1,5 @@
+package NewPrepare;
+
 import java.util.ArrayList;
 
 public class firstAndLastPositions {
@@ -20,8 +22,8 @@ public class firstAndLastPositions {
         if(first!=-1){
             al.add(first);
             al.add(last);
-          //  System.out.println("first accurance is"+first);
-           // System.out.println("last accurance is"+last);
+            //  System.out.println("first accurance is"+first);
+            // System.out.println("last accurance is"+last);
         }
         /*else{
            // System.out.println("not found");
@@ -31,10 +33,10 @@ public class firstAndLastPositions {
     }
     public static void main(String args[]){
         long arr[] = {1, 3, 5, 5, 5, 5, 67, 123, 125};
-         int x = 5;
-       ArrayList<Long> l=getAccurance(arr,x);
+        int x = 5;
+        ArrayList<Long> l=getAccurance(arr,x);
 
-       System.out.println(l);
+        System.out.println(l);
 
     }
 }

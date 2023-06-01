@@ -1,3 +1,4 @@
+package NewPrepare;
 public class ReplaceallZeroWithFive {
     static int reverseTheNumber(int temp)
     {
@@ -15,19 +16,15 @@ public class ReplaceallZeroWithFive {
         // if num is 0 return 5
         if (num == 0)
             return 5;
-
             // Extract the last digit and
             // change it if needed
         else {
             int temp = 0;
-
             while (num > 0) {
                 int digit = num % 10;
-
                 //if digit is 0, make it 5
                 if (digit == 0)
                     digit = 5;
-
                 temp = temp * 10 + digit;
                 num = num / 10;
             }
@@ -37,7 +34,6 @@ public class ReplaceallZeroWithFive {
             return reverseTheNumber(temp);
         }
     }
-
     // Driver program
     public static void main(String args[])
     {

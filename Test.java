@@ -1,35 +1,22 @@
-package JAVA8;
+package NewHackersRank;
 
-import java.util.function.Function;
+import java.util.StringTokenizer;
 
 public class Test {
-//    public static int getInt(int n){
-//        return n*n;
-//    }
-
-
-
     public static void main(String args[]){
-          ////using lamda java 7
-        //System.out.println(Test.getInt(10));
+        String str="This is an example string right Yes";
+       // String s=str.replaceAll("[.,!?]","");
+      //  String s1=s.replaceAll(" "," ");
+        String d[]=str.split(" ");
+        for(String dd:d){
+            System.out.println(dd);
+        }
 
-
-
-        //  //using lamda java 8
-        Function<Integer,Integer> f=i->i*i;
-        System.out.println(f.apply(5));
-
-        //lambda expression
-
-
-
-
+        /*StringTokenizer st=new StringTokenizer(s);
+           int n=st.countTokens();
+        for(int i=0;i<n;i++){
+            System.out.println(st.nextToken());
+        }*/
+       // System.out.println(s);
     }
-
-
-
-
-
-
-
 }

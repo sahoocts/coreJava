@@ -1,28 +1,32 @@
-package HackersRankk;
+package NewPrepare;
+
+import java.util.Arrays;
 
 public class Reverse {
-    public static void main(String[] args) {
 
-/*        Scanner sc = new Scanner(System.in);
-        String A = sc.next();*/
-        String A="madam";
-        char ch[] = A.toCharArray();
-        int i = 0;
-        int j = A.length()-1;
-       // char c;
-        while (i < j) {
-           char c = ch[i];
-            ch[i] = ch[j];
-            ch[j] = c;
+    public static void main(String args[]){
+        String st="SAROJ";
+       /* String s="";
+        for(int i=st.length()-1;i>=0;i--){
+            s=s+st.charAt(i);
+        }
+
+        System.out.print(s);*/
+
+        char ch[]=st.toCharArray();
+        int i=0;
+        int j=st.length()-1;
+        while(i<j){
+            char c=ch[i];
+            ch[i]=ch[j];
+            ch[j]=c;
             i++;
             j--;
         }
-        String str = String.valueOf(ch);
-        System.out.print(str);
-        if (A.equals(str)) {
-            System.out.print("YES");
-        } else {
-            System.out.print("NO");
+       String s= Arrays.toString(ch);
+        System.out.print(s);
+        for(char d:ch){
+            System.out.print(d);
         }
     }
 }

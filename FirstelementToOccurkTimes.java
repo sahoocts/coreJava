@@ -1,3 +1,5 @@
+package NewPrepare;
+
 import java.util.HashMap;
 
 public class FirstelementToOccurkTimes {
@@ -34,8 +36,8 @@ public class FirstelementToOccurkTimes {
     public static void main(String args[]){
         int N = 7, K = 2;
         int A[] = {1, 7, 4, 3, 4, 8, 7};
-       int x= getKthElement(A,N,K);
-       System.out.println(x);
+        int x= getKthElement(A,N,K);
+        System.out.println(x);
 
     }
 
