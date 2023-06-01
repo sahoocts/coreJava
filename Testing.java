@@ -1,29 +1,28 @@
-package NewPrepare;
+package Small_Program;
 
+public class Testing {
 
-interface AAA{
-    public void m1();
-}
+    static int count[]=new int[256];
+    static void getchar(String str){
+        for(int i=0;i<str.length();i++){
+            count[str.charAt(i)]++;
+        }
 
-interface BBB{
-    public void m1();
-}
-
-interface CCC{
-    public void m1();
-}
-interface DDD extends AAA,BBB,CCC{
-
-}
-public class Testing implements DDD{
-    public void m1(){
-        System.out.println("Testing");
     }
-    public static void main(String args[]){
-        AAA s=new Testing();
-        s.m1();
+    static void getchar1(String str1){
+        getchar(str1);
+       // int index = -1;
+        for(int i=0;i<str1.length();i++){
+            if(count[str1.charAt(i)]==1){
+                System.out.println(str1.charAt(i));
 
-        // AAA s1=new Testing();
-        //s1.m1();
+            }
+
+        }
+    }
+
+    public static void main(String args[]){
+        String str="daaabbebcccc";
+        getchar1(str);
     }
 }

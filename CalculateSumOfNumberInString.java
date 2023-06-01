@@ -1,3 +1,5 @@
+package PrevPractice;
+
 public class CalculateSumOfNumberInString {
     static int findSum(String str)
     {

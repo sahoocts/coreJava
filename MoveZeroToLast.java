@@ -1,27 +1,31 @@
-package NewPrepare;
+package TwentyFive;
 
 public class MoveZeroToLast {
-    public static void main(String[] args) {
-
-        // int n=4;
-        int k=6;
-        int a[]={1,0,2,0,3,0,4,5};
-        int b[]=new int[a.length];
-        int x=a[a.length-1];
-        int n=a.length;
-        // System.out.println(x);
-        int j=0;
-        for(int i=0;i<n;i++){
-            if(a[i]!=0){
-                b[i]=a[j];
-                j++;
+ //   static int[] getMoveZeroToLast(int a[]){
+ static int[] getMoveZeroToLast(int a[]){
+       // int temp[]=new int[a.length];
+       /* int i=0;
+        for(int j=0;j<a.length;j++){
+            if(a[j]>0){
+                a[i]=a[j];
+                i++;
             }
         }
-
-        for(int s:b){
-            System.out.println(s);
+        while(i<a.length){
+            a[i]=0;
+             i++;
         }
-        //  System.out.println("Hello, World!");
+     return a*/;
+
+    return a;
+    }
+    public static void main(String args[]){
+        int arr[]={3,0,4,0,0,5,6};
+       // int b[]=getMoveZeroToLast(arr);
+       int b[]= getMoveZeroToLast(arr);
+        for(int s:b){
+            System.out.print(s);
+        }
 
     }
 }

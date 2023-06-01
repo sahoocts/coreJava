@@ -1,44 +1,17 @@
-package HackersRank_06062022;
+package PrevPractice;
 
 import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class HashMapExample {
 
     public static void main(String args[]){
-        /*HashMap<Integer,String> hs=new HashMap<>();
-        hs.put(null,"saroj1");
-        hs.put(null,"saroj2");
-        hs.put(null,"saroj3");
-        hs.put(null,"saroj4");
-        for(Map.Entry<Integer,String> e:hs.entrySet()){
-            System.out.print(e.getKey()+"::"+e.getValue());
-            System.out.println();
-
-
+        HashMap<Character,Integer> hs=new HashMap<>();
+        hs.put('A',100);
+        hs.put('B',200);
+        for(Map.Entry en:hs.entrySet()){
+            System.out.println(hs.get(en.getKey()));
         }
-
-        System.out.print(hs.size());*/
-
-        int digit=11224;
-
-      //  int a=12;
-        int b=0;
-        int c=0;
-       while(digit>0){
-           c=digit%10;
-           digit =digit/10;
-           System.out.print("digit::"+digit+"::");
-           System.out.println("c"+c);
-
-       }
-
-
-
-
-
-
-
-
+      //  System.out.print(hs.get('A'));
     }
 }
