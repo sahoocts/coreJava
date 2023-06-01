@@ -1,9 +1,7 @@
-package NewPrepare;
-
-
+package nighteen_four;
 
 public class Longest_Common_Prefix_using_Word {
-    //
+//
     static String getLongestCommonPrefix(String str,String s){
 
         int n1=str.length();
@@ -15,7 +13,7 @@ public class Longest_Common_Prefix_using_Word {
             }
             pre=pre+str.charAt(i);
         }
-        return pre;
+             return pre;
     }
 
     static String getCommonPrefix(String a[],int n){
@@ -23,14 +21,14 @@ public class Longest_Common_Prefix_using_Word {
         for(int i=1;i<n;i++){
             prefix =getLongestCommonPrefix(prefix,a[i]);
         }
-        return prefix;
+    return prefix;
     }
 
     public static void main(String args[]){
         String arr[] = {"geeksforgeeks", "geeks",  "geek", "geezer"};
         int n=arr.length;
-        String ss= getCommonPrefix(arr,n);
-        System.out.println(ss);
+       String ss= getCommonPrefix(arr,n);
+       System.out.println(ss);
 
     }
 }

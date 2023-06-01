@@ -1,23 +1,26 @@
-package NewPrepare;
+package nighteen_four;
 
 public class ReverseAWord {
+
     public static void main(String args[]){
-        String str="i.like.this.program.very.much.";
-        String st[]=str.split("\\.");
-       // String st[]=str.split(" ");
+        String str="i.like.this.program.very.much";
+
+      //  String str="i:like:this:program:very:much";
+        String s[]=str.split("\\.");
+        int n=s.length;
         int i=0;
-        int j=st.length-1;
-        String st1="";
+        int j=n-1;
+        String st="";
         while(i<j){
-            st1=st[i];
-            st[i]=st[j];
-            st[j]=st1;
+            st=s[i];
+            s[i]=s[j];
+            s[j]=st;
             i++;
             j--;
         }
-        String d="";
-        for(String s:st){
-            System.out.print(s+".");
-        }
+     for(String d:s){
+         System.out.print(d+".");
+     }
+
     }
 }
