@@ -1,25 +1,16 @@
-package Java8.Employeee;
+package HackersRankk;
+
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Employee {
-
     private int id;
-    private int deptId;
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "deptId=" + deptId +
-                ", salary=" + salary +
-                '}';
-    }
-
+    private int age;
     private String name;
-    private double salary;
-    public Employee(int id, int deptId, String name, double salary) {
-        this.id = id;
-        this.deptId = deptId;
-        this.name = name;
-        this.salary = salary;
+    public Employee(int id, int age, String name){
+        this.id=id;
+        this.name=name;
+        this.age=age;
     }
 
     public int getId() {
@@ -30,12 +21,12 @@ public class Employee {
         this.id = id;
     }
 
-    public int getDeptId() {
-        return deptId;
+    public int getAge() {
+        return age;
     }
 
-    public void setDeptId(int deptId) {
-        this.deptId = deptId;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getName() {
@@ -46,15 +37,28 @@ public class Employee {
         this.name = name;
     }
 
-    public double getSalary() {
-        return salary;
+public static void main(String args[]){
+
+    List<Employee> list= Arrays.asList(new Employee(1,20,"saroj"),
+            new Employee(2,30,"Sachin"),new Employee(3,40,null));
+
+    //pull out the name of employe whos ages greater 20;
+
+     list.stream().filter(e->e.age>20).forEach(e->System.out.println(e.name));
+
+  //  System.out.println(map);
+
+
+
+//   String opt=Optional.ofNullable(str).map(String::toUpperCase).orElse("Not present");
+ //   System.out.println(opt);
+    /*if(opt.isPresent()){
+        System.out.println(e.name.toUpperCase());
     }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-
+    else{
+        System.out.println("not present");
+    }*/
+}
 
 
 }

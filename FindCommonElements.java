@@ -11,7 +11,6 @@ public class FindCommonElements {
         HashMap<Integer, Integer> hm = new HashMap<>();
 
         for(int i: A){
-
             if(!hm.containsKey(i)){
                 hm.put(i, 1);
             }else{

@@ -8,7 +8,7 @@ public class Alternate_positive_and_negative_numbers {
         for(int i=0;i<n;i++){
             if(a[i]>=0){
                 b[s]=a[i];
-                s+=1;
+                s=s+1;
             }
         }
         int m=s;

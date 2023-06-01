@@ -1,12 +1,19 @@
-package Java8;
-
-import java.util.*;
+package Geeksforgeeks;
 
 public class FindDuplicate {
-    public static void main(String args[]){
-        List<Integer> al= Arrays.asList(1,2,98,98,20,20);
-        Set<Integer> set=new HashSet<Integer>();
-        al.stream().filter(n->!set.add(n)).forEach(System.out::println);
+    static void getDuplicate(int a[]){
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]==a[j]){
+                    System.out.println("::"+a[i]);
+                }
+            }
+        }
+    }
 
+    public static void main(String args[]){
+        int N = 5;
+        int a[] = {2,3,1,2,3};
+        getDuplicate(a);
     }
 }

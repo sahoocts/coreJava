@@ -21,7 +21,7 @@ public class Cyclically_rotate_an_array {
        int A[] = {1, 2, 3, 4, 5};
        int c[]=cyclicRotation(A);
        for(int f:c){
-           System.out.println(f);
+           System.out.print(f);
        }
     }
 }

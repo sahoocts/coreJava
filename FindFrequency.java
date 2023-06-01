@@ -16,7 +16,6 @@ public class FindFrequency {
         }
         return fre;
     }
-
     public static void main(String args[]){
        int N = 5;
         int a[]={1, 1, 1, 1, 1};

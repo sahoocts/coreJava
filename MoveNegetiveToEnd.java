@@ -1,7 +1,6 @@
 package Eighteen_four;
 
 public class MoveNegetiveToEnd {
-
     static int[] moveNegetive(int arr[]){
         int temp[]=new int[arr.length];
         int j=0;
